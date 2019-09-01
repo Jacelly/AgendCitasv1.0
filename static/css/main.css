@@ -1,0 +1,27 @@
+.header-logo{
+	width: 15rem;
+	margin:5px 5px;
+	height:50px;
+
+}
+.color-content {
+    background-color: #12e6a3;
+    margin-top: 0;
+    padding: 20px 20px 20px 20px;
+}
+.header {
+  background-color: #12e6a3;
+  padding: 20px;
+  text-align: center;
+}
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    padding-bottom: 70px;
+}
+.centrar-form{
+ margin: 50px auto;
+ float:none;
+}

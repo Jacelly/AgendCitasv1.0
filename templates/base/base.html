@@ -1,0 +1,92 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		 {% block extrahead %}
+		 {% endblock %}
+		 <link rel="icon" href="{% static 'favicon/Logo1.ico' %}"/>
+		 <link rel="stylesheet"type="text/css"  href="{% static 'css/main.css' %}"/>
+		 <link rel="stylesheet" href="https://bootswatch.com/3/flatly/bootstrap.min.css">
+		 <link rel="stylesheet" type="text/css" ref="{% static 'css/bootstrap.min.css' %}">
+
+		 <title>{% block title %} Document {% endblock %} </title>
+	</head>
+
+	<body>
+
+			{% block navbar %}
+			    <div class="header">
+			        <div class="row">
+			            <div class="col-lg-12 ">
+			                <div class="bs-component">
+
+			                 <nav class="navbar navbar-inverse navbar-fixed-top"> 
+ 
+			                 	 <div class="navbar-left" >
+			                          <img class="navbar-brand " src="{% static 'favicon/logo1.png' %}"  alt="logo" style=" width: 200px; height:80px;">
+			                          <!--<a class="navbar-brand" href="{% url 'index' %}">Inicio</a>-->
+			                     </div>  			              
+			                     <div class="container-fluid ">
+			                        <div class="navbar-header " >
+			                          <a class="navbar-brand " href="{% url 'index' %}">Inicio</a> 	
+			                        </div>
+			                       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			                         <ul class="nav navbar-nav">
+			                            <li class="dropdown">
+			                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tratamientos <span class="caret"></span></a>
+			                              <ul class="dropdown-menu" role="menu">
+			                               <li><a href="{% url 'tratamiento_crear' %}">Agregar</a></li>
+			                               <li><a href="{% url 'tratamiento_listar' %}">Eliminar</a></li>
+			                              </ul>
+			                            </li>	
+			                            <li class="dropdown">	                          
+				                       	   <a href="#">Aplicar Tratamiento</a>
+				                        </li>
+				                       <li class="dropdown">
+				                           <a  href="{% url 'registrar_Admin' %}">Registrar</a>
+				                       </li>
+			                         </ul>
+			                         <ul class="nav navbar-nav navbar-right">
+			                             <li class="dropdown">
+			                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Opciones<span class="caret"></span></a>
+			                              <ul class="dropdown-menu" role="menu">
+			                                 <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
+			                              </ul>
+			                            </li>
+			                         </ul>
+			                       </div>
+			                     </div>
+			                 </nav>
+			                </div>
+			            </div>
+			        </div>
+			      </div>
+
+			 {% endblock %}
+		
+		{% block header %}
+		<div class="well">
+			<h1> Soy el header del base </h1>
+		</div>
+		{% endblock %}
+		<div class="container color-content">
+			{% block content %}
+				<div class="well color-content">
+					Esté es el contenido del archivo base.
+				</div>
+			{% endblock %}
+		</div>
+
+		{% block footer %}
+			<div class=" well footer">
+				<h1>Soy el footer del base</h1>      
+			</div>
+		{% endblock %}
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+		{% block extrajs %}
+		{% endblock %}
+	</body>
+</html>

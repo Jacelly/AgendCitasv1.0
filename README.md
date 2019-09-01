@@ -1,2 +1,2 @@
-# AgendCitasv1.0
-pruebas
+# AgendCitas
+Proyecto de ingeniería de software 2019
